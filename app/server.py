@@ -32,7 +32,6 @@ class ClientProtocol(asyncio.Protocol):
                         )
                         self.connection_lost("Duplicate login attempt, disconnected.")
                         self.transport.close()
-
                         return
 
                 self.login = entered_login
